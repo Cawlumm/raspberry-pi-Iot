@@ -7,19 +7,17 @@ on:
 
 jobs:
   basic-ubuntu-20:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checout@v2
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
-        with: python-version '3.11.6'
+        with: python-version '3.9'
 
       - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install RPi.GPIO
+        run: pip install RPi.GPIO
 
       - name: Run Tests
         run: Python LEDfade.py

@@ -1,6 +1,6 @@
 name: CI/CD for Controls
 #Test
-On:
+on:
   push:
     branches:
       - main

@@ -36,5 +36,5 @@ jobs:
 
       - name: Run Test
         run: |
-          cd code
+          cd Code
           python LEDfade.py

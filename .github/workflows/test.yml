@@ -31,9 +31,10 @@ jobs:
           ls /opt/hostedtoolcache/Python
           echo "PATH:"
           echo $PATH
+      - name: Debugging - List Files in "code" Directory
+        run: ls # List files in the "code" directory
 
       - name: Run Test
         run: |
-          cd raspberry-pi-iot
           cd code
           python LEDfade.py
